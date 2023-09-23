@@ -1,8 +1,21 @@
 import food from "./../Assets/restauranfood.jpg";
 
 const AboutSection = () => {
+  const handleClick = () => {
+    const element = document.getElementById("Reservations-Section");
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
-    <div class="bg-tgreen px-80 grid grid-cols-2 h-96">
+    <div
+      id="About-Section"
+      class="relative bg-tgreen px-80 grid grid-cols-2 h-96"
+    >
       <div class="flex items-center mr-24">
         <div class="grid justify-items-start">
           <h1 class="text-6xl text-tyellow">Little Lemon</h1>
@@ -11,7 +24,10 @@ const AboutSection = () => {
             We are a family owned Mediterranean restuarant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <button class="bg-tyellow hover:bg-yellow-500 text-black font-bold py-3 px-5 rounded-full mt-4">
+          <button
+            class="bg-tyellow hover:bg-yellow-500 text-black font-bold py-3 px-5 rounded-full mt-4"
+            onClick={handleClick}
+          >
             Reserve a table
           </button>
         </div>

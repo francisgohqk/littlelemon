@@ -40,13 +40,13 @@ const Header = () => {
   };
 
   return (
-    <nav class="px-80">
+    <nav class="px-80 sticky top-0 z-50 bg-white">
       <div class="flex flex-wrap items-center justify-between py-5">
         <div class="flex items-center">
           <img src={logo} class="h-14" alt="Little Lemon Logo" />
         </div>
         <div>
-          <ul class="font-medium flex flex-row mt-0 bg-white">
+          <ul class="font-medium flex flex-row mt-0">
             {pages.map((pages) => (
               <li>
                 <button
